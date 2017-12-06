@@ -31,15 +31,15 @@
 // Soil moisture connect to A0
 // Connect dht to Pin 4
 // RTC????
-#define wifi_ssid "Orange-1A2B"
-#define wifi_password "E7CE2462"
-#define mqtt_server "192.168.1.102"
+#define wifi_ssid "xxx"
+#define wifi_password "xxx"
+#define mqtt_server "xxx.xxx.x.xxx"
 uint16_t mqtt_port=1883;
 //#define mqtt_server "mqtt.thingstud.io"
 //uint16_t mqtt_port=9001;
-#define username="sergiolapria@gmail.com"
-#define mqtt_user "sergio"
-#define mqtt_password "mieres"
+#define username="xxxx@gxxxx"
+#define mqtt_user "xxxx"
+#define mqtt_password "xxxx"
 #define pressure_topic "bmp/pressure"
 #define temperature_topic "DHT/temperature"
 #define soil_topic "sensor/soil"
@@ -56,7 +56,7 @@ int DHTPIN=0;
 #define DHTTYPE DHT22 //AM23302
 DHT_Unified dht(DHTPIN,DHTTYPE);
 uint32_t delayMS;  
-////
+////NodeMCU`s PinOut
 #define D0 16
 #define D1 5
 #define D2 4
@@ -98,7 +98,7 @@ void reconnect(){
     //if(client.connect("ESP8266Client"))
     {
       if(client.subscribe("raspberry/frio")){
-        Serial.println("FRIO");//prueba de subscripcion
+        Serial.println("FRIO");//probe subscription
       }
       Serial.println("connected");
     }else{
