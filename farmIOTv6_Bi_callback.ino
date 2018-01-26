@@ -11,16 +11,16 @@
 #include <DHT_U.h>
 #include <Adafruit_BMP280.h>
 
-#define wifi_ssid "MiFibra-3A89"
-#define wifi_password "wWvah5rw"
+#define wifi_ssid "xxxxxxx"
+#define wifi_password "xxxxxx"
 #define mqtt_server "192.168.1.100" //pi zero server
 uint16_t mqtt_port=1883;
+///Only for external brokers
 #define ext_mqtt_server "m23.cloudmqtt.com"
 uint16_t ext_mqtt_port=10760;
-#define username="sergiolapria1975@gmail.com"
-#define mqtt_user "ungadbai"
-#define mqtt_password "338uBdCeo8lX"
-//topics
+#define username="xxxxxx"
+#define mqtt_user "xxxxxx"
+#define mqtt_password "xxxxxx"
 //topics
 #define bmp_pressure "bmp/pressure"
 #define bmp_temperature "bmp/temperature"
@@ -38,9 +38,7 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 PubSubClient extClient(espClient);
 
-
 int DHTPIN=0; //D3
-
 
 #define DHTTYPE DHT22 //AM23302
 DHT_Unified dht(DHTPIN,DHTTYPE);
@@ -71,7 +69,6 @@ float temp1=0.0;
 float newTemp1=0.0;
 float altitud=0.0;
 float newAltitud=0.0;
-
 
 int err=0;
 int MS=10;
